@@ -30,7 +30,6 @@ export class DetailsComponent implements OnInit {
     this._httpService.getCharacterById(id!).subscribe((data: any) => {
       if (data.data.results[0]) {
         this.character = data.data.results[0];
-        console.log(this.character)
       }
     });
   }
