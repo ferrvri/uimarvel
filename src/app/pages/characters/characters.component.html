@@ -1,0 +1,19 @@
+<div class="grid m-0">
+    <ng-container *ngIf="loading && this.characters.length < 1">
+        <div class="col-12 flex justify-content-center align-items-center flex-column">
+            <p-progressSpinner></p-progressSpinner>
+            <small>Loading...</small>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="!loading && this.characters.length < 1">
+        <div class="col-12 flex justify-content-center align-items-center">
+            <h4>Empty result</h4>
+        </div>
+    </ng-container>
+
+    <div class="col-12 lg:col-4 sm:col-6" *ngFor="let character of characters">
+        <app-character-card [name]="character.name" [image]="character.thumbnail.path"
+            (favorited)="onFavorite(character)" (clicked)="onClicked(character)"></app-character-card>
+    </div>
+</div>

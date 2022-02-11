@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    min-height: 60px;
+    background: #0c0a0a;
+    color: red;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-width: 150px;
+    min-height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-bottom: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+}
+
+.logo {
+    padding: 10px;
+    max-width: 10em;
+    min-height: 50px;
+
+}
+
+@media screen and (max-width: 640px) {
+    .logo {
+        max-width: 5rem;
+    }
+
+    .link {
+        font-size: 0.8rem;
+    }
+}

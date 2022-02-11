@@ -1,0 +1,41 @@
+<div class="flex flex-column justify-content-center align-items-center">
+    <div class="mt-10 col-12 lg:col-4 flex justify-content-center align-items-center">
+        <img src="./assets/images/logo.png" width="40%">
+    </div>
+
+    <div class="col-12 lg:col-4">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h3 class="pl-5 pt-5">Entrar</h3>
+            </ng-template>
+
+            <form [formGroup]="loginForm">
+                <div class="form grid flex justify-content-center align-items-center">
+                    <div class="field w-full">
+                        <span class="p-input-icon-left w-full">
+                            <i class="pi pi-user"></i>
+                            <input type="text" pInputText placeholder="Usuário / E-mail" class="w-full"
+                                formControlName="email" (keydown.enter)="passwordInput.focus()">
+                        </span>
+                        <small class="mt-2" *ngIf="this.loginForm.get('email')?.invalid">Digite um e-mail válido</small>
+                    </div>
+
+                    <div class="field w-full">
+                        <span class="p-input-icon-left w-full">
+                            <i class="pi pi-lock"></i>
+                            <input type="password" pInputText placeholder="Senha" class="w-full"
+                                formControlName="password" (keydown.enter)="login()" #passwordInput>
+                        </span>
+                    </div>
+                </div>
+            </form>
+
+            <ng-template pTemplate="footer">
+                <div class="form grid flex justify-content-end align-items-end">
+                    <p-button label="Entrar" icon="pi pi-sign-in" iconPos="right" class="p-button-danger" (click)="login()">
+                    </p-button>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

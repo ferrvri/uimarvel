@@ -1,0 +1,12 @@
+<div class="grid m-0">
+    <div class="col-12 lg:col-6">
+        <div class="p-4">
+            <h2>{{this.character.name}}</h2>
+            <span>{{this.character.description || 'No description'}}</span>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 flex justify-content-center align-items-center">
+        <img [src]="this.character.thumbnail.path" width="75%">
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="card">
+    <button class="fav-button" *ngIf="showFavoriteIcon" (click)="favorited.emit()">
+        <i class="pi pi-star"></i>
+    </button>
+    <img [src]="this.image" class="image"/>
+    <div class="title" (click)="clicked.emit()">
+        <span>{{this.name}}</span>
+    </div>
+</div>

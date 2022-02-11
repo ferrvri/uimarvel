@@ -1,0 +1,66 @@
+.card {
+    background: #dcdcdc;
+    display: table;
+    margin: auto;
+    height: 320px;
+    min-width: 280px;
+    max-width: 320px;
+    position: relative;
+}
+
+.fav-button {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    background: none;
+    border: none;
+    min-width: 32px;
+    min-height: 32px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.fav-button > i {
+    font-size: 1.4rem;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.title {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    width: 100%;
+    right: 1px;
+    transform: translateX(0%);
+    background: rgba(255, 255, 255, 0.2);
+    color: #212121;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .card {
+        width: 90%;
+        max-width: none;
+    }
+
+    .image {
+        display: table;
+        margin: auto;
+        width: 50%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(0%);
+    }
+}

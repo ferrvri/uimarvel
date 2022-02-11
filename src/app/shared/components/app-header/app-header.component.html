@@ -1,0 +1,20 @@
+<header class="header">
+    <div class="col-2">
+        <img class="logo" src="./assets/images/logo.png">
+    </div>
+    <div class="col-6 lg:col-6">
+        <a class="link" [routerLink]="link.path" *ngFor="let link of links" [routerLinkActive]="'active'">
+            {{link.name}}
+        </a>
+    </div>
+    <div class="col-1">
+        <a class="link" (click)="logOut()">
+            Sair
+        </a>
+    </div>
+
+    <div class="col-2 flex flex-column">
+        <input pInputText [(ngModel)]="searchTerm" placeholder="Search" (keydown.enter)="search()"/>
+        <small *ngIf="searchTerm.length > 0">Press enter</small> 
+    </div>
+</header>

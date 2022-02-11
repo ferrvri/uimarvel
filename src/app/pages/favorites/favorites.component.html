@@ -1,0 +1,12 @@
+<div class="grid m-0">
+    <ng-container *ngIf="this.characters.length < 1">
+        <div class="col-12 flex justify-content-center align-items-center">
+            <h4>Nenhum favorito adicionado</h4>
+        </div>
+    </ng-container>
+
+    <div class="col-12 lg:col-4 sm:col-6" *ngFor="let character of characters">
+        <app-character-card [name]="character.name" [image]="character.thumbnail.path" [showFavoriteIcon]="false"
+            (clicked)="onClicked(character)"></app-character-card>
+    </div>
+</div>
